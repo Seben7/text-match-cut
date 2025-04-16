@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Match Cut Video Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Optional CSS -->
+    <style>
+        /* Basic inline styles if not using style.css */
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold;}
+        input[type="text"], input[type="number"], input[type="color"], select {
+            width: 100%; padding: 8px; box-sizing: border-box; max-width: 400px;
+        }
+        button { padding: 10px 20px; cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 4px; }
+        button:hover { background-color: #0056b3; }
+        .result, .error { margin-top: 20px; padding: 15px; border-radius: 4px; }
+        .result { background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+        .error { background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+        .loading { display: none; margin-top: 20px; } /* Initially hidden */
+    </style>
+</head>
+<body>
+    <h1>Text Match Cut Video Generator</h1>
+
+    {% if error %}
+        <div class="error">
+            <strong>Error:</strong> {{ error }}
+        </div>
+    {% endif %}
+
+    {% if filename %}
+        <div class="result">
+            <p>Video generated successfully!</p>
+            <a href="{{ url_for('download_file', filename=filename) }}" download>Download {{ filename }}</a>
+        </div>
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('generate') }}" id="videoForm">
+        <div class="form-group">
+            <label for="highlighted_text">Highlighted Text:</label>
+            <input type="text" id="highlighted_text" name="highlighted_text" value="Mother of Dragons" required>
+        </div>
+
+        <div class="form-group">
+            <label for="duration">Duration (seconds):</label>
+            <input type="number" id="duration" name="duration" value="5" min="1" max="30" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fps">Frames Per Second (FPS):</label>
+            <input type="number" id="fps" name="fps" value="10" min="1" max="30" required>
+        </div>
+
+        <div class="form-group">
+             <label for="width">Video Width (px):</label>
+             <input type="number" id="width" name="width" value="1024" min="256" max="1920" required>
+         </div>
+         <div class="form-group">
+             <label for="height">Video Height (px):</label>
+             <input type="number" id="height" name="height" value="1024" min="256" max="1920" required>
+         </div>
+
+        <div class="form-group">
+            <label for="highlight_color">Highlight Color:</label>
+            <input type="color" id="highlight_color" name="highlight_color" value="#ffff00"> <!-- Default yellow -->
+        </div>
+
+        <div class="form-group">
+            <label for="text_color">Text Color:</label>
+            <input type="color" id="text_color" name="text_color" value="#000000"> <!-- Default black -->
+        </div>
+
+        <div class="form-group">
+            <label for="background_color">Background Color:</label>
+            <input type="color" id="background_color" name="background_color" value="#ffffff"> <!-- Default white -->
+        </div>
+
+         <div class="form-group">
+            <label for="blur_type">Blur Type:</label>
+            <select id="blur_type" name="blur_type">
+                <option value="gaussian">Gaussian</option>
+                <option value="radial" selected>Radial</option>
+                <option value="none">None</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="blur_radius">Blur Radius (0 for none):</label>
+            <input type="number" id="blur_radius" name="blur_radius" value="4.0" step="0.1" min="0" max="50" required>
+        </div>
+
+        <div class="form-group">
+            <label for="ai_enabled">Use Mistral AI for Text Generation?</label>
+            <input type="checkbox" id="ai_enabled" name="ai_enabled" value="true" {% if mistral_available %}checked{% endif %} {% if not mistral_available %}disabled{% endif %}>
+            {% if not mistral_available %}
+                <small>(MistralAI library not found or API key missing - Random text will be used)</small>
+            {% endif %}
+         </div>
+
+        <button type="submit" id="generateButton">Generate Video</button>
+    </form>
+
+    <div class="loading" id="loadingIndicator">
+        <p>Generating video... This may take a minute or two.</p>
+        <!-- Add a spinner or progress animation here if desired -->
+        <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading..." width="50"> <!-- Example spinner -->
+    </div>
+
+    <script>
+        // Simple script to show loading indicator on form submit
+        const form = document.getElementById('videoForm');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const submitButton = document.getElementById('generateButton');
+
+        form.addEventListener('submit', function() {
+            // Disable button to prevent multiple submissions
+            submitButton.disabled = true;
+            submitButton.textContent = 'Generating...';
+            // Show loading indicator
+            loadingIndicator.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

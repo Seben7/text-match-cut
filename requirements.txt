@@ -1,0 +1,7 @@
+Flask>=2.0
+Pillow>=9.0
+moviepy>=1.0
+numpy>=1.20
+matplotlib>=3.4      # For font fallback mechanism
+mistralai>=0.1       # Or the latest version
+python-dotenv>=0.19  # To load environment variables from .env
