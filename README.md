@@ -1,11 +1,10 @@
 # Text Match Cut Video Generator Web App
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <!-- Optional: Add a license badge -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A Flask web application that generates short "match cut" style videos featuring highlighted text. The app centers a specific phrase, surrounds it with related or random text, applies optional blur effects, and allows customization of colors, dimensions, and duration. It can optionally use the Mistral AI API to generate contextually relevant surrounding text.
 
-![Screenshot Placeholder](https://via.placeholder.com/800x400.png?text=Add+Screenshot+of+Web+UI+Here)
-*Replace the placeholder above with a screenshot of your web application's interface.*
+![image](https://github.com/user-attachments/assets/04ba9ad9-1c32-4e9c-bd8f-ca80e70222c2)
 
 ## Features
 
