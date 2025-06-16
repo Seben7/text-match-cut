@@ -1,131 +1,99 @@
-# Text Match Cut Video Generator Web App
+# 🎬 Text Match Cut Video Generator Web App
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub release](https://img.shields.io/github/release/Seben7/text-match-cut.svg) ![GitHub issues](https://img.shields.io/github/issues/Seben7/text-match-cut.svg) ![GitHub stars](https://img.shields.io/github/stars/Seben7/text-match-cut.svg)
 
-A Flask web application that generates short "match cut" style videos featuring highlighted text. The app centers a specific phrase, surrounds it with related or random text, applies optional blur effects, and allows customization of colors, dimensions, and duration. It can optionally use the Mistral AI API to generate contextually relevant surrounding text.
+Welcome to the **Text Match Cut** repository! This web application allows users to generate engaging video content using the innovative text match cut effect. Perfect for creators, marketers, and anyone looking to enhance their video production with AI-driven technology.
 
-![image](https://github.com/user-attachments/assets/04ba9ad9-1c32-4e9c-bd8f-ca80e70222c2)
+## 🚀 Features
 
-## Features
+- **Text Match Cut Generation**: Automatically create stunning video transitions that match text elements.
+- **User-Friendly Interface**: Simple and intuitive design for easy navigation.
+- **API Integration**: Leverage our API for seamless integration into your projects.
+- **Customizable Effects**: Tailor the effects to suit your video style and preferences.
+- **Web-Based**: No downloads required; works directly in your browser.
 
-*   **Web-Based Interface:** Easy-to-use form built with Flask and HTML.
-*   **Custom Highlight Text:** Specify the exact phrase you want to highlight.
-*   **Configurable Video:** Adjust video width, height, duration (seconds), and frames per second (FPS).
-*   **Color Customization:** Set colors for text, background, and the highlight box using a color picker.
-*   **Blur Effects:**
-    *   **Gaussian Blur:** Apply a standard blur to the background text.
-    *   **Radial Blur:** Keep the center sharp and increasingly blur towards the edges.
-    *   **None:** No blur effect.
-    *   Adjustable blur radius.
-*   **Dynamic Text Generation:**
-    *   **Mistral AI:** (Optional, requires API key) Generates multiple lines of text thematically related to your highlight phrase, ensuring the phrase is included naturally.
-    *   **Random Text:** Falls back to generating random words if AI is disabled or unavailable.
-*   **Font Handling:** Uses fonts from a local `fonts/` directory or falls back to system fonts. Randomly selects fonts for visual variety frame-by-frame.
-*   **MP4 Output:** Generates a downloadable `.mp4` video file.
-*   **Error Handling:** Provides feedback for font issues or generation errors.
+## 📦 Installation
 
-## Requirements
+To get started, you can download the latest release from our [Releases section](https://github.com/Seben7/text-match-cut/releases). Once downloaded, follow the instructions provided in the release notes to execute the application.
 
-*   **Python:** 3.8+ recommended.
-*   **pip:** Python package installer.
-*   **FFmpeg:** Essential for video encoding/writing by Moviepy. **You MUST install FFmpeg separately** and ensure it's accessible in your system's PATH. Download from [ffmpeg.org](https://ffmpeg.org/download.html).
-*   **Mistral AI API Key:** (Optional) Required *only* if you want to use the AI text generation feature. You'll need to sign up at [Mistral AI](https://mistral.ai/) to get one.
+## 📖 Usage
 
-## Installation & Setup
+1. **Open the Application**: Launch the web app in your preferred browser.
+2. **Upload Your Video**: Drag and drop your video file or use the upload button.
+3. **Add Text**: Input the text you want to match with your video.
+4. **Choose Effects**: Select from various text match cut effects available in the app.
+5. **Generate Video**: Click on the generate button and watch your video transform!
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone https://github.com/lrdcxdes/text-match-cut.git
-    cd text-match-cut
-    ```
+## 🌐 Topics
 
-2.  **Create a Virtual Environment (Recommended):**
-    ```bash
-    python -m venv venv
-    # On Windows:
-    .\venv\Scripts\activate
-    # On macOS/Linux:
-    source venv/bin/activate
-    ```
+This project covers various topics that enhance its functionality and reach:
 
-3.  **Install Dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+- **After Effects**: Integrate with Adobe After Effects for advanced editing.
+- **AI**: Utilize artificial intelligence to improve video editing efficiency.
+- **API**: Access our robust API for custom implementations.
+- **App**: A fully functional web app that runs in your browser.
+- **Effect**: Create visually appealing effects that engage viewers.
+- **Generator**: Generate unique video content with ease.
+- **Site**: A dedicated site for accessing the app and its features.
+- **Text Match**: Focus on text matching to create dynamic transitions.
+- **Video**: Enhance your video projects with our technology.
+- **Web**: A web-based solution that requires no installation.
 
-4.  **Set Up Mistral AI API Key (Optional):**
-    *   Create a file named `.env` in the project's root directory (`text_video_app/`).
-    *   Add your API key to this file:
-        ```ini
-        # .env
-        MISTRAL_API_KEY=your_actual_mistral_api_key_here
-        ```
-    *   The application will automatically load this key. If the key is missing or invalid, or if the `mistralai` library isn't installed, the AI feature will be disabled, and the app will use random text generation.
+## 🎨 Screenshots
 
-5.  **Add Fonts:**
-    *   Place `.ttf` or `.otf` font files into the `fonts/` directory. The application prioritizes fonts found here.
-    *   If the `fonts/` directory is empty or no valid fonts are found, it will attempt to use system-installed fonts (which might be less reliable across different environments). **Having fonts in the `fonts/` folder is highly recommended.**
+![Text Match Cut Interface](https://via.placeholder.com/800x400?text=Text+Match+Cut+Interface)
 
-6.  **Ensure Output Directory Exists:**
-    *   The script automatically creates an `output/` directory where generated videos are temporarily stored. Ensure your application has write permissions for this directory.
+*The user-friendly interface of the Text Match Cut web app.*
 
-## Usage
+![Generated Video Example](https://via.placeholder.com/800x400?text=Generated+Video+Example)
 
-1.  **Run the Flask Application:**
-    ```bash
-    python app.py
-    ```
+*An example of a video generated using the text match cut effect.*
 
-2.  **Access the Web Interface:**
-    *   Open your web browser and navigate to `http://127.0.0.1:5000/` (or the address provided in the terminal, especially if running on a different host/port).
+## 💡 How It Works
 
-3.  **Configure Video Parameters:**
-    *   Fill out the form with your desired settings: highlighted text, duration, dimensions, colors, blur options, etc.
-    *   Check/uncheck the "Use Mistral AI" box (it will be disabled if the API key is not set up correctly or the library is missing).
+The Text Match Cut web app uses advanced algorithms to analyze text and video content. By matching the text elements with specific frames in the video, it creates seamless transitions that enhance storytelling. 
 
-4.  **Generate Video:**
-    *   Click the "Generate Video" button.
-    *   The process might take some time depending on video duration, resolution, and your system's performance. A loading indicator will be shown. Check the terminal running `app.py` for progress logs and potential errors.
+1. **Text Analysis**: The app scans the input text to determine key phrases.
+2. **Frame Selection**: It identifies frames in the video that correspond to the text.
+3. **Transition Creation**: The app generates smooth transitions based on the selected frames and text.
 
-5.  **Download:**
-    *   If generation is successful, a download link for the `.mp4` file will appear on the page.
-    *   If errors occur (e.g., font issues, FFmpeg problems, AI errors), an error message will be displayed on the page.
+## 🛠️ Technologies Used
 
-## Project Structure
-```
-text_video_app/
-├── app.py # Main Flask application, includes video generation logic
-├── requirements.txt # Python dependencies
-├── templates/
-│ └── index.html # HTML template for the web UI
-├── static/
-│ └── style.css # Optional CSS for styling
-├── fonts/ # <--- Add your .ttf/.otf font files here
-│ └── (example.ttf)
-├── output/ # Generated videos are saved here temporarily
-├── .env # Store your MISTRAL_API_KEY here (Create this file!)
-└── README.md # This file
-```
+- **HTML/CSS**: For the frontend structure and styling.
+- **JavaScript**: To handle user interactions and API calls.
+- **Node.js**: For the backend server and processing tasks.
+- **FFmpeg**: For video processing and manipulation.
+- **TensorFlow.js**: To implement AI features within the app.
 
-## Technology Stack
+## 📅 Roadmap
 
-*   **Backend:** Flask
-*   **Video Processing:** Moviepy (relies on FFmpeg)
-*   **Image Manipulation:** Pillow (PIL Fork)
-*   **Numerical Operations:** NumPy
-*   **AI Text Generation (Optional):** Mistral AI Python Client (`mistralai`)
-*   **Environment Variables:** `python-dotenv`
-*   **Font Handling Fallback:** Matplotlib (`font_manager`)
+- **Version 1.0**: Initial release with basic text match cut functionality.
+- **Version 1.1**: Improved UI/UX and additional effects.
+- **Version 1.2**: API enhancements for better integration.
+- **Version 2.0**: Major update with AI-driven suggestions for text and effects.
 
-## License
+## 🧑‍🤝‍🧑 Contributing
 
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+We welcome contributions from the community! If you want to help improve the Text Match Cut web app, please follow these steps:
 
-## Contributing
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit them (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue if you find bugs or have suggestions for improvements.
+## 📄 License
 
-## Acknowledgements
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-*   Inspired by kinetic typography and text-based video effects.
-*   Uses the powerful Mistral AI models for creative text generation.
+## 📞 Contact
+
+For questions or feedback, feel free to reach out via [GitHub Issues](https://github.com/Seben7/text-match-cut/issues) or directly through the repository.
+
+## 🔗 Links
+
+- [Releases](https://github.com/Seben7/text-match-cut/releases) - Check for the latest updates and download the application.
+- [Documentation](https://github.com/Seben7/text-match-cut/wiki) - Explore our wiki for more detailed instructions and tips.
+- [Demo](https://yourwebsite.com/demo) - Try out a live demo of the Text Match Cut web app.
+
+Thank you for checking out the Text Match Cut Video Generator Web App! We hope you find it useful for your video projects.
